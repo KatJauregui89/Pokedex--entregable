@@ -15,14 +15,15 @@ const Pokemons = () => {
             .then(res => setPokemons(res.data.results))
     }, [])
 
-    console.log(pokemons);
     return (
         <div>
             <h1>Pokemons</h1>
             <p>Welcome {userName}!</p>
             <ul>
                 {pokemons.map(pokemon => (
-                    <PokemonCard url={pokemon.url} />
+                    <li key={pokemon.name}>
+                        <PokemonCard url={pokemon.url} />
+                    </li>
                     // <li key={pokemon.name}>{pokemon.url}</li>
                 ))}
             </ul>
