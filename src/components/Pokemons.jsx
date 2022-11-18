@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import PokemonCard from './PokemonCard';
 
 const Pokemons = () => {
 
@@ -19,9 +20,12 @@ const Pokemons = () => {
         <div>
             <h1>Pokemons</h1>
             <p>Welcome {userName}!</p>
-            {pokemons.map(pokemon => (
-                <li key={pokemon.name}>{pokemon.url}</li>
-            ))}
+            <ul>
+                {pokemons.map(pokemon => (
+                    <PokemonCard url={pokemon.url} />
+                    // <li key={pokemon.name}>{pokemon.url}</li>
+                ))}
+            </ul>
         </div>
     );
 };
