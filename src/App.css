@@ -10,16 +10,51 @@ h3{
 }
 
 .pokecard{
+  width: 220px;
+  height: 220px;
   padding: 1rem;
+
+  position: relative;
   margin: 1rem;
   border: 1px solid black;
   max-width: 200px;
   display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+  color: white;
+  text-decoration: none;
+
+  border-radius: 1.3rem;
+}
+.card-description{
+  height: 100%;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+.card-description>div{
+  background-color: rgba(206, 184, 184, 0.4);
+
+  max-width: 88px;
+  border-radius: 12px;
+  padding: 2px 9px;
+  font-size: 14px;
 }
 
 .pokecard > img{
-  max-width: 100px;
+  max-width: 85px;
+  max-height: 85px;
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+}
+.pokemons{
+  padding: 0 6rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: auto;
+}
+ul{
+  list-style: none;
 }
