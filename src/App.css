@@ -138,15 +138,31 @@ ul{
   list-style: none;
 }
 .pokemon-full-description{
-  width: 80%;
+  width: 100%;
+  height: 100%;
+  padding: 4rem 15%;
   margin: auto;
+  background-color: rgb(112, 205, 177);
 
+  display: grid;
+  grid-template-areas: 
+  "main  main movements"
+  "types abilities movements"
+  "stats stats movements"
+  ". . movements"
+  ;
+  gap: 2rem;
 }
-.first-grid{
+.pokemon-full-description>div{
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  border-radius: 8px;
+
+  background-color: white;
 }
+
 .main-picture{
   width: 200px;
 }
@@ -158,5 +174,46 @@ ul{
 .Name-and-id{
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.first-grid{
+  grid-area: main;
+}
+.second-grid{
+  grid-area: types;
+  height: 180px;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.third-grid{
+  grid-area: abilities;
+  height: 150px;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.fourth-grid{
+  grid-area: stats;
+  
+}
+
+.fifth-grid{
+  grid-area: movements;
+}
+.types-full-description,.abilities-full-description{
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+.types-full-description>div,.abilities-full-description>div{
+  width: 150px;
+  height: 50px;
+  display:flex;
+  border: solid black;
+  border-radius: 5px;
+
+  justify-content: center;
   align-items: center;
 }

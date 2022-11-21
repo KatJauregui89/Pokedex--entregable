@@ -21,14 +21,14 @@ const PokemonDetail = () => {
                     <b>{pokemon.height}</b>
                 </div>
                 <div className='Name-and-id'>
-                    <b>{pokemon.name}</b>
+                    <h3>{pokemon.name}</h3>
                     <b>{pokemon.id}</b>
                 </div>
             </div>
-            <div>
-                <div>Types</div>
+            <div className='second-grid'>
+                <h3>Types</h3>
                 <div>
-                    <ul>
+                    <ul className='types-full-description'>
                         {
                             pokemon.types?.map(type => (
                                 <div key={type.slot}>{type.type.name}</div>
@@ -37,10 +37,10 @@ const PokemonDetail = () => {
                     </ul>
                 </div>
             </div>
-            <div>
-                <div>Abilities</div>
+            <div className='third-grid'>
+                <h3>Abilities</h3>
                 <div>
-                    <ul>
+                    <ul className='abilities-full-description'>
                         {
                             pokemon.abilities?.map(ability => (
                                 <div key={ability.slot}>{ability.ability?.name}</div>
@@ -49,8 +49,8 @@ const PokemonDetail = () => {
                     </ul>
                 </div>
             </div>
-            <div>
-                <div>Stats Base</div>
+            <div className='fourth-grid'>
+                <h3>Stats Base</h3>
                 <div>
                     <ul>
                         {
@@ -61,8 +61,8 @@ const PokemonDetail = () => {
                     </ul>
                 </div>
             </div>
-            <div>
-                <div>Movements</div>
+            <div className='fifth-grid'>
+                <h3>Movements</h3>
                 <div>
                     <ul>
                         {
