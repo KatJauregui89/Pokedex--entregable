@@ -3,6 +3,6 @@ import usernameSlice from './slices/username.slice'
 
 export default configureStore({
     reducer: {
-        username: usernameSlice
+        username: usernameSlice,
     }
 })

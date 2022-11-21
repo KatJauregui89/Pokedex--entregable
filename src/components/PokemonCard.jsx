@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const PokemonCard = ({ url }) => {
+
     const [pokemon, setPokemon] = useState({})
 
     useEffect(() => {
@@ -27,9 +28,12 @@ const PokemonCard = ({ url }) => {
     type === 'bug'?color = 'rgb(85, 136, 146)':
     type === 'dark'?color = 'rgb(4, 7, 6)':
     type === 'fairy'?color = 'rgb(140, 39, 68)':
-    type === 'unknown'?color = 'red':
-    type === 'shadow'?color = 'red':
-    color = 'red'
+    type === 'ground'?color = 'rgb(253, 234, 96)':
+    type === 'ice'?color = 'rgb(149, 200, 240)':
+    type === 'dragon'?color = 'rgb(85, 136, 146)':
+    color = 'rgb(149, 200, 240)'
+    
+    
     return (
         <Link to={`/pokemons/${pokemon.id}`} className='pokecard' style={{backgroundColor:color}}>
             <div className='card-description'>

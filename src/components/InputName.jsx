@@ -15,10 +15,16 @@ const InputName = () => {
     }
 
     return (
-        <div>
-            <h1>Input Name</h1>
-            <input type="text" onChange={e => setUsername(e.target.value)} value={username} />
-            <button onClick={enterName}>Enter</button>
+        <div className='home-container'>
+            <div className='home-image-container'>
+                <h1>Hello trainer!</h1>
+                <img src="https://www.seekpng.com/png/full/201-2011786_red-by-xous-54-red-pokemon-trainer-png.png" alt="" />
+            </div>
+            <p>Give me your name to start</p>
+            <div className='home-input-continer'>
+                <input type="text" onChange={e => setUsername(e.target.value)} value={username} />
+                <button onClick={enterName}>Enter</button>
+            </div>
         </div>
     );
 };

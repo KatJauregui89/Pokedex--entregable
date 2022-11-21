@@ -3,21 +3,101 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
 h3{
   display: inline;
 }
+.home-container{
+  padding-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-image-container>img{
+  max-width: 130px;
+}
+.home-image-container{
+  display: flex;
+}
+.home-image-container>h1{
+  margin-top: 2rem;
+}
+
+.pokedex-container{
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 15%;
+  padding-top: 5rem;
+  gap: 2rem;
+}
+.pokedex-forms{
+  padding: 0 25%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.8rem;
+}
+#types{
+  width: 400px;
+  height: 60px;
+  border-radius: 3rem;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+
+
+.check-container{
+  height: 50px;
+  width: 100%;
+
+}
+
+.lbl-switch{
+  display: inline-block;
+  width: 55px;
+  height: 30px;
+  background-color: #aaa;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+
+  margin: auto;
+
+}
+#check-box:checked~ .lbl-switch{
+  background: #61A0FF;
+}
+
+.lbl-switch::after{
+  position: absolute;
+  content: '';
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border-radius: 50%;
+  top: 4px;
+  left: 5px;
+  transition: 0.3s;
+}
+
+#check-box:checked~ .lbl-switch::after{
+  left: 28px;
+}
+
+#check-box{
+  display:none;
+}
 
 .pokecard{
-  width: 220px;
+  width: 200px;
   height: 220px;
   padding: 1rem;
 
   position: relative;
-  margin: 1rem;
+  margin: 1rem 0;
   border: 1px solid black;
-  max-width: 200px;
   display: flex;
   flex-direction: row;
   align-items: end;
@@ -34,7 +114,7 @@ h3{
   justify-content: space-between;
 }
 .card-description>div{
-  background-color: rgba(206, 184, 184, 0.4);
+  background-color: rgba(255, 255, 255, 0.261);
 
   max-width: 88px;
   border-radius: 12px;
@@ -50,7 +130,6 @@ h3{
   bottom: 10px;
 }
 .pokemons{
-  padding: 0 6rem;
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: auto;
