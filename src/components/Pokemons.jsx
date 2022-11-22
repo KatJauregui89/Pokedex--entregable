@@ -31,7 +31,7 @@ const Pokemons = () => {
         pages.push(i)
     }
 
-    const buttonsPaginated = pages.slice(page - 1, page+10)
+    const buttonsPaginated = pages.slice(page - 1, page + 10)
 
     return (
         <div className='pokedex-container'>
@@ -39,13 +39,17 @@ const Pokemons = () => {
             <p>Welcome {userName}!, here you can find your favorite pokemon</p>
 
             <div className='pokedex-forms'>
-                <div className='check-container'>
-                    <label htmlFor="check-box" className='lbl-switch' id='prueba'></label>
-                    <input type="checkbox" id='check-box' onChange={()=>setWriteName(!writeName)}/>
+                
+                <div className='switch-container'>
+                <span>type</span>
+                <input type="checkbox" className='hide' id='switch' onChange={() => setWriteName(!writeName)} />
+                    <label htmlFor="switch" className='lbl'></label>
+                    <span>Pokemon</span>
                 </div>
+                
 
                 <section>
-                    <select className={writeName?'hide':'visible'} id='types' onChange={(e) => { setFilter(e.target.value) }}>
+                    <select className={writeName ? 'hide' : 'visible'} id='types' onChange={(e) => { setFilter(e.target.value) }}>
                         <option value="">All pokemons</option>
                         <option value="Normal" >Normal</option>
                         <option value="fighting" >fighting</option>
@@ -69,10 +73,11 @@ const Pokemons = () => {
                         <option value="shadow" >shadow</option>
 
                     </select>
-                    <div className={!writeName?'hide':'visible'}>
+                    <div className={!writeName ? 'hide' : 'visible'}>
                         <label htmlFor="search-pokemon-name"></label>
                         <input type="text" id='search-pokemon-name' value={pokemonName}
-                        onChange={e=>setPokemonName(e.target.value)}/>
+                            onChange={e => setPokemonName(e.target.value)} 
+                            placeholder='Write the name of a pokemon here'/>
                     </div>
                 </section>
             </div>
@@ -80,9 +85,9 @@ const Pokemons = () => {
 
             <ul className='pokemons'>
                 {pokemonPaginated.map(pokemon => (
-                    
+
                     <li key={pokemon.name}>
-                        
+
                         <PokemonCard url={pokemon.url} />
 
                     </li>
@@ -94,7 +99,7 @@ const Pokemons = () => {
                     onClick={() => setPage(page - 1)}
                     disabled={page === 1}
                     className='button-page'
-                    >prev</button>
+                >prev</button>
                 <div className='buttons-page'>
                     {buttonsPaginated.map((number) => (
                         <button

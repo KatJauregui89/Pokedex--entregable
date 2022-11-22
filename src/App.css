@@ -58,47 +58,49 @@ h3{
   display: none;
 }
 
-
-.check-container{
-  height: 50px;
-  width: 100%;
-
-}
-
-.lbl-switch{
+.lbl{
+  position: relative;
   display: inline-block;
   width: 55px;
   height: 30px;
-  background-color: #aaa;
+  background-color: #5bc763;
+
   border-radius: 100px;
-  position: relative;
   cursor: pointer;
-
-  margin: auto;
-
-}
-#check-box:checked~ .lbl-switch{
-  background: #61A0FF;
 }
 
-.lbl-switch::after{
-  position: absolute;
+button{
+  cursor: pointer;
+}
+
+.lbl::after{
   content: '';
-  width: 22px;
-  height: 22px;
-  background: #fff;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(238, 238, 238);
   border-radius: 50%;
-  top: 4px;
-  left: 5px;
-  transition: 0.3s;
+  position: absolute;
+  top: 2.4px;
+  left: 3px;
+  
+  transition: .5s;
 }
 
-#check-box:checked~ .lbl-switch::after{
-  left: 28px;
+#switch:checked + .lbl::after{
+  left: 27px;
 }
 
-#check-box{
-  display:none;
+#switch:checked + .lbl{
+  background-color: rgb(83, 154, 198);
+}
+
+.switch-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .pokecard{
@@ -125,14 +127,16 @@ h3{
   justify-content: space-between;
 }
 .card-description>div{
-  background-color: rgba(255, 255, 255, 0.261);
+  background-color: rgba(174, 174, 174, 0.368);
 
   max-width: 88px;
   border-radius: 12px;
   padding: 2px 9px;
   font-size: 14px;
 }
-
+select{
+  cursor: pointer;
+}
 .pokecard > img{
   max-width: 85px;
   max-height: 85px;
