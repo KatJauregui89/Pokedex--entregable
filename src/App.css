@@ -38,6 +38,12 @@ h3{
   text-align: center;
   gap: 0.8rem;
 }
+.inputs-to-search{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 #types{
   width: 400px;
   height: 60px;
@@ -50,9 +56,17 @@ h3{
   width: 400px;
   height: 60px;
   padding: 1rem;
-  border-radius: 3rem;
+  border-radius: 3rem 0 0 3rem;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.search-pokemon{
+  width: 50px;
+  height: 60px;
+  border: none;
+  border-radius:0 50% 50% 0%;
+  background-color: #0f9de95d;
+  box-shadow: rgba(0, 0, 0, 0.20) 0px 22px 70px 0;
 }
 .hide{
   display: none;

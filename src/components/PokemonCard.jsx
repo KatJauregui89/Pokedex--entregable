@@ -20,7 +20,7 @@ const PokemonCard = ({ url }) => {
     type === 'poison'?color = 'rgb(134, 90, 156)':
     type === 'fighting'?color = 'rgb(141, 67, 45)':
     type === 'flying'?color = 'rgb(78, 102, 121)':
-    type === 'rock'?color = 'rgb(253, 234, 96)':
+    type === 'rock'?color = 'rgb(64,27,15)':
     type === 'ghost'?color = 'rgb(48, 53, 102)':
     type ==='steel'?color='rgb(97, 114, 108)':
     type === 'electric'?color = 'rgb(227, 222, 85)':
