@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 h3{
   display: inline;
@@ -259,6 +261,7 @@ ul{
 
 .fourth-grid{
   grid-area: stats;
+  padding: 2.5rem 0;
   
 }
 
@@ -267,18 +270,24 @@ ul{
 
   padding-top: 2rem;
   width: 230px;
+  height: 100%;
   align-items: center;
+
+  max-height: 100vh;
+  overflow-y: scroll;
+
 }
 .fifth-grid>div{
   display: flex;
   flex-direction: column;
+  padding: 1rem;
   gap: 8px;
 }
 .move{
   width: 100%;
   height: 25px;
   text-align: center;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  box-shadow: rgba(17, 17, 26, 33%) 0px 1px 0px;
 }
 .types-full-description,.abilities-full-description{
   width: 300px;
@@ -298,3 +307,34 @@ ul{
   justify-content: center;
   align-items: center;
 }
+.bar-container{
+  width: 80%;
+  height: 25px;
+  background: #CCC;
+  border-radius: 20px;
+  position: relative;
+
+}
+
+.bar-container .progress-bars{
+  position: absolute;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: end;
+  color: white;
+  background-color: rgb(113, 181, 116);
+
+}
+.stats-bars,.main-stats-container{
+  width: 100%;
+  padding-left: 2rem;
+}
+.stats-bars{
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+}
+

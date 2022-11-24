@@ -65,10 +65,16 @@ const PokemonDetail = () => {
                 </div>
                 <div className='fourth-grid'>
                     <h3>Stats Base</h3>
-                    <div>
+                    <div className='main-stats-container'>
                         {
                             pokemon.stats?.map(stat => (
-                                <div key={stat.stat.name}>{stat.stat.name}{' '}{stat.base_stat}</div>
+                                <div key={stat.stat.name} className='stats-bars'>
+                                    <b>{stat.stat.name}</b>
+                                    <div className='bar-container'>
+                                        <div className="progress-bars" style={{ width: `${stat.base_stat/1.5}%` }}>
+                                        {stat.base_stat}/150</div>
+                                    </div>
+                                </div>
                             ))
                         }
 
