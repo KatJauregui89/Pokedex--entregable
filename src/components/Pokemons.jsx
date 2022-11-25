@@ -37,13 +37,13 @@ const Pokemons = () => {
     }
 
     const filterType = (e) => {
-        if(e.target.value){
+        if (e.target.value) {
             axios.get(e.target.value)
-            .then(res=>{setPokemons(res.data.pokemon)})
-        console.log(e.target.value);
-        }else{
+                .then(res => { setPokemons(res.data.pokemon) })
+            console.log(e.target.value);
+        } else {
             axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1154')
-            .then(res => setPokemons(res.data.results))
+                .then(res => setPokemons(res.data.results))
         }
     }
 
@@ -79,10 +79,12 @@ const Pokemons = () => {
 
                     <div className={!writeName ? 'hide' : 'visible'}>
                         <label htmlFor="search-pokemon-name"></label>
-                        <input type="text" id='search-pokemon-name' value={pokemonName}
-                            onChange={e => setPokemonName(e.target.value)}
-                            placeholder='Write the name of a pokemon here' />
-                        <button className='search-pokemon' onClick={searchPokemon}>search</button>
+                        <div className="search-byname">
+                            <input type="text" id='search-pokemon-name' value={pokemonName}
+                                onChange={e => setPokemonName(e.target.value)}
+                                placeholder='Write the name of a pokemon here' />
+                            <button className='search-pokemon' onClick={searchPokemon}>search</button>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -90,8 +92,8 @@ const Pokemons = () => {
 
             <ul className='pokemons'>
                 {pokemonPaginated.map(pokemon => (
-                    <li key={pokemon.name?pokemon.name:pokemon.pokemon.name}>
-                        <PokemonCard url={pokemon.url?pokemon.url:pokemon.pokemon.url} />
+                    <li key={pokemon.name ? pokemon.name : pokemon.pokemon.name}>
+                        <PokemonCard url={pokemon.url ? pokemon.url : pokemon.pokemon.url} />
                     </li>
                 ))}
             </ul>
