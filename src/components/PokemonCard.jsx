@@ -15,23 +15,22 @@ const PokemonCard = ({ url }) => {
     type === 'grass' ? color = 'rgb(112, 204, 177)' :
         type === 'fire' ? color = 'rgb(235, 117, 113)' :
             type === 'water' ? color = 'rgb(125, 183, 244)' :
-                type === 'bug' ? color = 'rgb(142, 231, 124)' :
-                    type === 'normal' ? color = 'rgb(100, 74, 81)' :
-                        type === 'poison' ? color = 'rgb(134, 90, 156)' :
-                            type === 'fighting' ? color = 'rgb(141, 67, 45)' :
-                                type === 'flying' ? color = 'rgb(78, 102, 121)' :
-                                    type === 'rock' ? color = 'rgb(64,27,15)' :
-                                        type === 'ghost' ? color = 'rgb(48, 53, 102)' :
-                                            type === 'steel' ? color = 'rgb(97, 114, 108)' :
-                                                type === 'electric' ? color = 'rgb(227, 222, 85)' :
-                                                    type === 'psychic' ? color = 'rgb(149, 209, 240)' :
-                                                        type === 'bug' ? color = 'rgb(139, 195, 74)' :
-                                                            type === 'dark' ? color = 'rgb(4, 7, 6)' :
-                                                                type === 'fairy' ? color = 'rgb(140, 39, 68)' :
-                                                                    type === 'ground' ? color = 'rgb(253, 234, 96)' :
-                                                                        type === 'ice' ? color = 'rgb(149, 200, 240)' :
-                                                                            type === 'dragon' ? color = 'rgb(85, 136, 146)' :
-                                                                                color = 'rgb(149, 200, 240)'
+                type === 'normal' ? color = 'rgb(100, 74, 81)' :
+                    type === 'poison' ? color = 'rgb(134, 90, 156)' :
+                        type === 'fighting' ? color = 'rgb(141, 67, 45)' :
+                            type === 'flying' ? color = 'rgb(78, 102, 121)' :
+                                type === 'rock' ? color = 'rgb(64,27,15)' :
+                                    type === 'ghost' ? color = 'rgb(48, 53, 102)' :
+                                        type === 'steel' ? color = 'rgb(97, 114, 108)' :
+                                            type === 'electric' ? color = 'rgb(227, 222, 85)' :
+                                                type === 'psychic' ? color = 'rgb(149, 209, 240)' :
+                                                    type === 'bug' ? color = 'rgb(139, 195, 74)' :
+                                                        type === 'dark' ? color = 'rgb(4, 7, 6)' :
+                                                            type === 'fairy' ? color = 'rgb(140, 39, 68)' :
+                                                                type === 'ground' ? color = 'rgb(253, 234, 96)' :
+                                                                    type === 'ice' ? color = 'rgb(149, 200, 240)' :
+                                                                        type === 'dragon' ? color = 'rgb(85, 136, 146)' :
+                                                                            color = 'rgb(149, 200, 240)'
 
 
     return (

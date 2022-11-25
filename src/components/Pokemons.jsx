@@ -103,7 +103,7 @@ const Pokemons = () => {
                     disabled={page === 1}
                     className='button-page'
                 >prev</button>
-                <div className='buttons-page'>
+                <div className='buttons-page center-btns'>
                     {buttonsPaginated.map((number) => (
                         <button
                             key={number}

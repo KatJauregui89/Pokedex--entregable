@@ -60,7 +60,9 @@ h3{
   justify-content: center;
   margin: 15%;
   padding-top: 0rem;
-  gap: 2rem;
+  gap: 1.5rem;
+  margin-top: 8vh;
+  margin-bottom: 1vh;
 }
 .pokedex-forms{
   padding: 0 25%;
@@ -158,7 +160,7 @@ button{
   padding: 1rem;
 
   position: relative;
-  margin: 1rem 0;
+  margin: 1rem 0.5rem;
   /* border: 1px solid black; */
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   display: flex;
@@ -296,7 +298,7 @@ background-color: rgb(133, 150, 238);
 
 .third-grid{
   grid-area: abilities;
-  height: 150px;
+  height: 180px;
   justify-content: center;
   gap: 2rem;
 }
@@ -349,6 +351,11 @@ background-color: rgb(133, 150, 238);
   justify-content: center;
   align-items: center;
 }
+
+.types-box, .ability-box{
+  background-color: #d7e8999b;
+}
+
 .bar-container{
   width: 80%;
   height: 25px;
@@ -365,11 +372,13 @@ background-color: rgb(133, 150, 238);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: end;
+  text-align: center;
   color: white;
   background-color: rgb(113, 181, 116);
 
 }
+
+
 .stats-bars,.main-stats-container{
   width: 100%;
   padding-left: 2rem;
@@ -378,6 +387,14 @@ background-color: rgb(133, 150, 238);
   display: flex;
   flex-direction: column;
   gap:8px;
+}
+
+.text-shadow{
+  text-shadow: 1px 2px 2px rgb(60 60 60 / 40%);
+}
+
+.title-size{
+  font-size: 24px;
 }
 
 @media screen and (max-width: 800px) {
@@ -393,5 +410,9 @@ background-color: rgb(133, 150, 238);
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: auto;
+  }
+
+  .pokedex-container{
+    width: 100%;
   }
 }
